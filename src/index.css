@@ -10,6 +10,16 @@
     body {
         user-select: none;
     }
+
+    @supports not (gap: 1.5em) {
+        .gap-y-6 {
+            margin: -0.75em;
+        }
+
+        .gap-y-6>* {
+            margin: 0.75em;
+        }
+    }
 }
 
 @layer utilities {
