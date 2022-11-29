@@ -54,7 +54,7 @@ function Timer({ setLoop }: { setLoop: React.Dispatch<React.SetStateAction<TimeT
         <div>
             <div>
                 <h3 className="text-[#f69514] text-xl font-semibold ml-6">Set timer</h3>
-                <div className='flex justify-center items-start gap-x-3'>
+                <div className='flex justify-evenly items-start'>
                     <h4 className="block w-[200px] text-[5rem] font-semibold text-left leading-[70px]
                            transition-all ease-linear">{`${formatNumber(time.minute)}:${formatNumber(time.second)}`}
                     </h4>
@@ -62,7 +62,7 @@ function Timer({ setLoop }: { setLoop: React.Dispatch<React.SetStateAction<TimeT
                 </div>
             </div>
             <div className="text-[1.5rem]
-                            flex justify-center items-center gap-x-12">
+                            flex items-center justify-evenly">
                 <Button onClick={onReset} Icon={AiOutlineUndo} />
                 <Button onClick={onRun} Icon={isRun ? MdOutlinePause : BsCaretRightFill} className="p-3 bg-[#f69514] rounded-full" />
                 <Button onClick={onLap} Icon={MdTimelapse} />
